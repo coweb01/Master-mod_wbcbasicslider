@@ -1,0 +1,1 @@
+// hier könnte JS hin, ist aber jetzt inline in default.php

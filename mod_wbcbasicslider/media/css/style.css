@@ -1,0 +1,37 @@
+:root {
+    --wbc-per-slide: 20%;
+}
+.carousel {
+    --carousel-control-color: rgba(2, 2, 2, 0.5);
+}
+
+@media (max-width:768px) {
+    .image-box {
+    max-width: 50%!important;
+    flex: 0 0 50%!important;
+    }
+}
+.image-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 var(--wbc-per-slide );
+    max-width: var(--wbc-per-slide );
+}
+
+.image-box img {
+  max-height: 100px;
+  object-fit: contain;
+}
+.wbc-basicslider {
+    max-width: 100%;
+    min-height: 100px;
+    padding: 3rem 0;
+}
+.wbc-basicslider .carousel-indicators button {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.wbc-basicslider .carousel-indicators button.active {
+    background-color: rgba(0, 0, 0, 0.9);
+}
+  
