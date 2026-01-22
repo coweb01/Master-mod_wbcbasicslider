@@ -77,7 +77,7 @@ $wa->addInlineScript(
         <div class="d-flex justify-content-center flex-wrap">
           <?php foreach ($chunk as $image): ?>
             
-            <?php $link = '#'; ?>
+            <?php $link = ''; ?>
             <?php $target = ''; ?>
             <?php $rel = ''; ?>
 
@@ -97,10 +97,15 @@ $wa->addInlineScript(
             <?php $caption  = isset($image->slide_caption) && !is_array($image->slide_caption) ? trim((string)$image->slide_caption) : ''; ?>   
 
             <div class="image-box text-center p-3 wbcslider-content">
-              <a href="<?php echo htmlspecialchars($link, ENT_QUOTES, 'UTF-8') ?>" class="wbcslider-link"<?php echo $target ?><?php echo $rel ?>>
-                <?php echo  HTMLHelper::_('image', $src, $alt, ['class' => 'img-fluid', 'loading' => 'lazy', 'width' => '400', 'height' => '200']) ?>
-              </a>
+              <?php if (!empty($link)): ?>
+                <a href="<?php echo htmlspecialchars($link, ENT_QUOTES, 'UTF-8') ?>" class="wbcslider-link"<?php echo $target ?><?php echo $rel ?>>
+                  <?php echo  HTMLHelper::_('image', $src, $alt, ['class' => 'img-fluid', 'loading' => 'lazy', 'width' => '400', 'height' => '200']) ?>
+                </a>
+              <?php else: ?>
+                  <?php echo  HTMLHelper::_('image', $src, $alt, ['class' => 'img-fluid', 'loading' => 'lazy', 'width' => '400', 'height' => '200']) ?>
+              <?php endif; ?>
             </div>
+
           <?php endforeach; ?>
         </div>
     </div>
