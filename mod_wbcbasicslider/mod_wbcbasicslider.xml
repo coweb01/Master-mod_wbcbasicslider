@@ -4,7 +4,7 @@
     <title>MOD_WBCBASICSLIDER</title>
     <description>MOD_WBCBASICSLIDER_DESC</description>
     <author>c. oerter</author>
-    <version>1.0.0</version>
+    <version>1.0.1</version>
     <creationDate>September 2025</creationDate>
     <files>
         <filename module="mod_wbcbasicslider">mod_wbcbasicslider.php</filename>
