@@ -86,8 +86,8 @@ $wa->addInlineScript(
             <?php } else { ?>
               <?php if (!empty($image->slide_link_extern )) { ?>
               <?php $link = $image->slide_link_extern; ?>
-              <?php $target = 'target="_blank"'; ?>
-              <?php $rel = 'rel="noopener"'; ?>   
+              <?php $target = ' target="_blank"'; ?>
+              <?php $rel = ' rel="noopener"'; ?>   
               <?php } ?>
             <?php }?>
 
@@ -112,7 +112,7 @@ $wa->addInlineScript(
     <?php endforeach; ?>
   </div>
 
-  <div role="group" aria-label="<?php echo Text::_('MOD_WBCBASICSLIDER_CAROUSEL_CONTROLS') ?>"<?php echo $totalSlides === 1 ? 'style="display:none;"' : '' ?>>
+  <div role="group" aria-label="<?php echo Text::_('MOD_WBCBASICSLIDER_CAROUSEL_CONTROLS') ?>"<?php echo $totalSlides === 1 ? ' style="display:none;"' : '' ?>>
     <button class="carousel-control-prev" type="button"
       data-bs-target="#imageCarousel<?= $module->id ?>" data-bs-slide="prev"
       aria-label="<?php echo Text::_('MOD_WBCBASICSLIDER_PREV_SET') ?>">
