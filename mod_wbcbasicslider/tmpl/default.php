@@ -55,7 +55,7 @@ $wa->addInlineScript(
 
     });',
     ['bootstrap.bundle'],
-    ['defer' => true]
+    []
 );
 
 ?>
